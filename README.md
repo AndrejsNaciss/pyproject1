@@ -48,5 +48,3 @@ Pirms lietošanas, lūdzu, pārliecinieties, ka visi nepieciešamie moduļi ir i
 Šī ir projekta sākotnēja versija, kura ar laiku pilnveidosies.
 
 Video ar programmatūras darbību un rezultātu: <https://www.loom.com/share/522fcb8a412c40b3b12c0657ee295047?sid=32a36216-0ced-4781-a98e-db80c2a3132c>
-
-This site was built using [GitHub Pages](https://pages.github.com/).
