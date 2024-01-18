@@ -17,3 +17,18 @@ def get_car_data():
     else:
         print("Lapas ielādes kļūda.")
         return None
+    
+def print_car_info(car_data):
+    for ad in car_data:
+        print(ad.text)
+
+def save_to_html(content):
+    with open("website.html", "w", encoding='utf-8', errors='ignore') as file:
+        file.write(str(content))
+
+def find_new_ads(current_ads, previous_ads):
+    if previous_ads is None:
+        return current_ads
+
+    new_ads = [ad for ad in current_ads if ad not in previous_ads]
+    return new_ads
