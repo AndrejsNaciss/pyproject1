@@ -14,9 +14,9 @@
 
 4. **`find_new_ads` funkcija:** Salīdzina pašreizējos auto sludinājumus ar iepriekšējiem (current_ads ar previous_ads), lai atrastu jaunus sludinājumus, kas nav bijuši iepriekšējā sarakstā. Atgriež sarakstu ar jauniem sludinājumiem.
 
-5. **`send_email` funkcija:** Sūta e-pasta paziņojumu ar jauno auto sludinājumu informāciju uz norādīto e-pasta adresi.  Jā, piemēram, uz viedā telefona uzinstalēt e-pasta klientu un ieslēgt pazīņojumus uz tā klienta, tad var sēkot līdzi jauniem vieglo auto sludinājumiem. Uz e-pastu atnāk jauno sludinājumu auto dati (marka, dzinējs, gads, cena) jā tos satur jauns sludinājums.
+5. **`send_email` funkcija:** Sūta e-pasta paziņojumu ar jauno auto sludinājumu informāciju uz norādīto e-pasta adresi, izmantojot SMTP serveri un pievienojot HTML daļu. Uz e-pastu atnāk jauno sludinājumu auto dati (marka, dzinējs, gads, cena) jā tos satur jauns sludinājums.
 
-6. **`main` funkcija:** Galvenā programma, kas periodiski pārbauda jaunos auto sludinājumus. Ja tiek atrasts jauns(i) sludinājums(i), to(s) izdrukā uz ekrāna un nosūta e-pastu. Pašreizējie sludinājumi tiek saglabāti HTML failā. Programma gaida 30 sekundes starp pārbaudēm. 
+6. **`main` funkcija:** Galvenā programma, kas periodiski pārbauda jaunos vieglo auto sludinājumus. Ja tiek atrasts jauns(i) sludinājums(i), to(s) izdrukā uz ekrāna un nosūta uz e-pastu. Pašreizējie sludinājumi tiek saglabāti HTML failā. Programma gaida 30 sekundes starp pārbaudēm.
 
 ## Bibliotēkas un Moduļi
 
@@ -41,7 +41,7 @@ Konfigurācijas informācija, piemēram, e-pasta adrešu, servera, un paroles da
 
 ## Lietošana
 
-Lai sāktu programmu, jāizpilda `main` funkcija, kas regulāri pārbauda jaunos auto sludinājumus un informē par tiem gan uz ekrāna, gan arī nosūta e-pasta paziņojumus.
+Lai sāktu programmu, jāizpilda `main` funkcija, kas regulāri pārbauda jaunos auto sludinājumus un informē par tiem gan uz ekrāna, gan arī nosūta e-pasta paziņojumus. Jā, piemēram, uz viedā telefona uzinstalēt e-pasta klientu un tajā ieslēgt pazīņojumus, tad var sēkot līdzi jauniem vieglo auto sludinājumiem.
 
 Pirms lietošanas, lūdzu, pārliecinieties, ka visi nepieciešamie moduļi ir instalēti, un konfigurācijas fails `config.py` ir pareizi konfigurēts ar jūsu e-pasta servera informāciju.
 
