@@ -1,6 +1,6 @@
 # pyproject1
 
-# Jauno Vieglo Auto Sludinājumu Pārskatītājs un Informētājs (Uz e-pastu)
+# Jauno Vieglo Auto Sludinājumu Pārskatītājs  un Informētājs (Uz e-pastu)
 
 Šī programma periodiski pārskata [SS.com](https://www.ss.com/lv/transport/cars/today/) vietni, lai atrastu jaunus vieglo auto sludinājumus. Ja tiek atrasts kāds jauns sludinājums, programma parāda informāciju par to ekrānā un nosūta paziņojumu uz norādīto e-pasta adresi.
 
