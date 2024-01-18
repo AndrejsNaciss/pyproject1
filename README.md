@@ -31,13 +31,13 @@
 Konfigurācijas informācija, piemēram, e-pasta adrešu, servera, un paroles dati, tiek iegūti no `config` faila.
 
 [Email]
-HOST = "smtp.example.com" vai "smtp.gmail.com"
-PORT = 587
-USERNAME = "jusu_epasta_adrese@example.com" vai "jusu_epasta_adrese@gmail.com"
-PASSWORD = "jusu_epasta_parole" vai "lietojumprogrammas_parole" (ja ieslēgta divfaktoru autentifikācija)
+- `HOST` = "smtp.example.com" vai "smtp.gmail.com"
+- `PORT` = 587
+- `USERNAME` = "jusu_epasta_adrese@example.com" vai "jusu_epasta_adrese@gmail.com"
+- `PASSWORD` = "jusu_epasta_parole" vai "lietojumprogrammas_parole" (ja ieslēgta divfaktoru autentifikācija)
 
 [Recipient]
-SENDTO = "nosutitajam@example.com" vai "nosutitajam@gmail.com"
+- `SENDTO` = "nosutitajam@example.com" vai "nosutitajam@gmail.com"
 
 ## Lietošana
 
