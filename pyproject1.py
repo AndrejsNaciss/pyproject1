@@ -32,3 +32,19 @@ def find_new_ads(current_ads, previous_ads):
 
     new_ads = [ad for ad in current_ads if ad not in previous_ads]
     return new_ads
+
+def send_email(subject, body):
+    message = MIMEMultipart("alternative")
+    message['Subject'] = subject
+    message['From'] = config.USERNAME
+    message['To'] = config.SENDTO
+    message['Cc'] = config.USERNAME
+
+    html_part = MIMEText(body, "html")
+    message.attach(html_part)
+
+    smtp = smtplib.SMTP(config.HOST, config.PORT)
+    smtp.starttls()
+    smtp.login(config.USERNAME, config.PASSWORD)
+    smtp.sendmail(config.USERNAME, config.SENDTO, message.as_string())
+    smtp.quit()
