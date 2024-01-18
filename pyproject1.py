@@ -48,3 +48,31 @@ def send_email(subject, body):
     smtp.login(config.USERNAME, config.PASSWORD)
     smtp.sendmail(config.USERNAME, config.SENDTO, message.as_string())
     smtp.quit()
+    
+def main():
+    previous_ads = []
+
+    while True:
+        current_ads = get_car_data()
+
+        if current_ads:
+            if previous_ads:
+                new_ads = find_new_ads(current_ads, previous_ads)
+
+                if new_ads:
+                    print("Atrasts jauna auto sludinājums:")
+                    print_car_info(new_ads)
+
+                    # Sūta epastu ar jauno slūdinājumu
+                    email_subject = "Jaunu auto sludinājumi"
+                    email_body = "<br>".join(ad.text for ad in new_ads)
+                    send_email(email_subject, email_body)
+
+            save_to_html(current_ads)
+
+            time.sleep(30)
+
+            previous_ads = current_ads
+
+if __name__ == "__main__":
+    main()
